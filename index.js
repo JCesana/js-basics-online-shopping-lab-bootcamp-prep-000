@@ -22,11 +22,14 @@ function viewCart() {
     var cartSummary = "In your cart, you have ";
     
     for (let i = 0; i < cart.length; i++) {
-      if (i !== cart.length - 1) { 
-        cartSummary += `${cart[i].itemName} at $${itemPrice}, `;
+      if (cart.length === 1) {
+        cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
+      } else if (i !== cart.length - 1) { 
+        cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
       } else {
-        cartSummary += ` and ${cart[i].itemName} at $${itemPrice}.`;
+        cartSummary += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
       }
+      return cartSummary;
     }
   }
 }
