@@ -19,7 +19,15 @@ function viewCart() {
   if (cart.length === 0) {
     return "Your shopping cart is empty.";
   } else {
+    var cartSummary = "In your cart, you have ";
     
+    for (let i = 0; i < cart.length; i++) {
+      if (i !== cart.length - 1) { 
+        cartSummary += `${cart[i].itemName} at $${itemPrice}, `;
+      } else {
+        cartSummary += ` and ${cart[i].itemName} at $${itemPrice}.`;
+      }
+    }
   }
 }
 
