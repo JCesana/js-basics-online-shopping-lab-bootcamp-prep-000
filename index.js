@@ -25,9 +25,9 @@ function viewCart() {
       if (cart.length === 1) {
         cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
       } else if (i !== cart.length - 1) { 
-        cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
-      } else {
         cartSummary += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
+      } else {
+        cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
       }
       return cartSummary;
     }
