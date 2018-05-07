@@ -24,10 +24,10 @@ function viewCart() {
     for (let i = 0; i < cart.length; i++) {
       if (cart.length === 1) {
         cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
-      } else if (i !== cart.length - 1) { 
-        cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
-      } else {
+      } else if (i === cart.length - 1) { 
         cartSummary += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
+      } else {
+        cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
       }
       return cartSummary;
     }
