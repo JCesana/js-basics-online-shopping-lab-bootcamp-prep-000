@@ -32,7 +32,6 @@ function viewCart() {
     }
     return cartSummary;
   }
-  
 }
 
 function total() {
