@@ -22,6 +22,7 @@ function viewCart() {
     var cartSummary = "In your cart, you have ";
     
     for (let i = 0; i < cart.length; i++) {
+      console.log('loop: ' + i);
       if (cart.length === 1) {
         cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
       } else if (i === cart.length - 1) { 
