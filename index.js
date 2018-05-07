@@ -29,9 +29,9 @@ function viewCart() {
       } else {
         cartSummary += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
       }
-      return cartSummary;
     }
   }
+  return cartSummary;
 }
 
 function total() {
